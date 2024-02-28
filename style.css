@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aqua;
+}
+
+.accordion {
+  max-width: 800px;
+}
+
+.accordion .contentbx {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion .contentbx .label {
+  position: relative;
+  padding: 10px;
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion .contentbx .label::before {
+  content: "+";
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  font-size: 1.5em;
+}
+
+.accordion .contentbx.active .label::before {
+  content: "-";
+}
+
+.accordion .contentbx .content {
+  position: relative;
+  background-color: white;
+  height: 0;
+  overflow: auto;
+  transition: 0.5s;
+}
+
+.accordion .contentbx.active .content {
+  height: 150px;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
